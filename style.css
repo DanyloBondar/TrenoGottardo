@@ -1,0 +1,290 @@
+.button-container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  padding: 20px;
+}
+
+.button-section-servey {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  border: 2px solid #ddd;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-section-servey img {
+  width: 110%;
+  height: 80%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-left: -6px;
+  margin-top: -2px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 60px; /* Отступ сверху для фиксированного header */
+}
+
+.site-header {
+  position: fixed; /* Закрепляем header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #003366; /* Глубокий синий цвет, связанный с Sudostbahn */
+  color: white;
+  z-index: 1000; /* Задаем высокий z-index, чтобы быть выше контента */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для стиля */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin-left: 30px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #005cbf; /* Светло-синий цвет для наведения */
+  border-radius: 5px;
+}
+
+/* Стили для бургер-меню */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto; /* Смещает бургер-меню вправо */
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+/* Адаптивные стили для навигации */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    width: 100%;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+/* Анимация бургер-меню при клике */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.pdf-viewer-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Расстояние между двумя страницами */
+  flex-wrap: wrap; /* Чтобы страницы могли переноситься на следующую строку на маленьких экранах */
+}
+
+#pdf-canvas, #pdf-canvas-second {
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+/* Адаптивное отображение для разных экранов */
+@media (max-width: 768px) {
+  #pdf-canvas, #pdf-canvas-second {
+    width: 90%; /* Размер для мобильных устройств */
+    height: auto;
+  }
+
+  #pdf-canvas-second {
+    display: none; /* Скрываем второй canvas на маленьких экранах */
+  }
+}
+
+@media (min-width: 769px) {
+  #pdf-canvas, #pdf-canvas-second {
+    width: 45%; /* Две страницы рядом для больших экранов */
+    height: auto;
+  }
+}
+.page-info {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.button-section-servey p {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  width: 100%; /* Занимает всю ширину кнопки */
+  background-color: #fff; /* Белый фон для текста */
+  box-sizing: border-box;
+}
+
+.button-section-servey:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#index::before {
+  content: "";
+  display: block;
+  height: 60px; /* Высота равна высоте header */
+  margin-top: -60px; /* Поднимаем элемент на высоту header */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-info {
+  display: flex;
+  justify-content: center; /* Центрирует текст */
+  align-items: center;
+  background-color: #f0f0f0; /* Светлый фон */
+  border-radius: 8px; /* Скругленные углы */
+  padding: 10px 20px; /* Отступы внутри */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  margin-top: 20px; /* Отступ сверху */
+  width: fit-content; /* Ширина по содержимому */
+  margin: 0 auto; /* Центрирование по горизонтали */
+}
+
+.page-info p {
+  font-size: 18px;
+  color: #333; /* Цвет текста */
+  font-weight: 500; /* Полужирный шрифт */
+  margin: 0;
+}
+
+.page-info span {
+  font-size: 18px;
+  font-weight: bold; /* Жирное выделение */
+  color: #005cbf; /* Цвет выделенного числа */
+  margin: 0 5px; /* Отступ между элементами */
+}
+
+/* Основные стили модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+/* Контейнер контента модального окна */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 12px;
+  animation: fadeIn 0.5s; /* Анимация появления */
+}
+
+/* Кнопка закрытия */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Заголовок модального окна */
+.modal-content h2 {
+  margin-top: 0;
+  color: #003366; /* Цвет заголовка */
+}
+
+/* Анимация появления модального окна */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
