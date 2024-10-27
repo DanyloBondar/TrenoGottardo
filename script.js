@@ -60,8 +60,8 @@ function generateContent () {
   <p>Sprachtraining (coming soon)</p>
 </button>
 
-<button class="button-sectiob-servey" style="border-radius: 100px;>
-<img src="img/IMG_2141.jpg">
+<button class="button-section-servey" style="border-radius: 100px;>
+    <img src="https://via.placeholder.com/150">
 </button>
 
 </div>`;
