@@ -61,7 +61,7 @@ function generateContent () {
 </button>
 
 <button class="button-section-servey" style="border-radius: 100px; max-width: 200px;">
-    <img src="img/IMG_2141.jpeg">
+    <img src="img/plus.png">
 </button>
 
 </div>`;
