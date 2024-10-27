@@ -60,10 +60,9 @@ function generateContent () {
   <p>Sprachtraining (coming soon)</p>
 </button>
 
-<button class="button-section-servey" style="border-radius: 100px; max-width: 200px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
-    <img src="img/plus.png" style="width: 50%; height: auto;">
+<button class="button-section-servey" style="border-radius: 100px; max-width: 200px; margin: 0; margin-left: 5px;">
+    <img src="img/plus.png">
 </button>
-
 </div>`;
 }
 
